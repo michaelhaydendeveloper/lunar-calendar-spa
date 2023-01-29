@@ -14,17 +14,21 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
 
     const localizer = momentLocalizer(moment);
 
+    let theDate: Date = new Date(); 
+
     /**
      * Update time per second.
      * 
      * @returns {Function} clearInterval - eliminates bleeding when navigation between pages
      */
     useEffect(() => {
-        const setIntervalHandler = setInterval(() => setLiveDate(new Date()), 500);
+        console.log('useEffect');
+        // const setIntervalHandler = setInterval(() => setLiveDate(new Date()), 500);
+        const setIntervalHandler = setInterval(() => theDate = new Date(), 500);
 
         return () => clearInterval(setIntervalHandler);
     }, [])
-    
+    console.log('lunar-calendar.feature');
     return (
         <FeatureContainer>
             <div className="page-container">
@@ -33,7 +37,7 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
                 <div data-testid="lc-lunar-phase-emoji" className="lunar-phase-emoji">{Moon.lunarPhaseEmoji(dateNow)}</div>
                 <div data-testid="lc-local-date-string">
                     {
-                        liveDate.toLocaleDateString('en-US', {
+                        theDate.toLocaleDateString('en-US', {
                             hour: 'numeric',
                             minute: 'numeric',
                             hour12: true,
