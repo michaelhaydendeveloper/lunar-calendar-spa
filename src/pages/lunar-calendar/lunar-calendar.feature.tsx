@@ -11,10 +11,9 @@ export interface LunarCalendarActionProps {}
 export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionProps> = ({}) => {
     const [dateNow, ] = useState(new Date());
     const [liveDate, setLiveDate] = useState<Date>(new Date());
+    const [lunarAgePercentage, setLunarAgePercentage] = useState<String>((Moon.lunarAgePercent() * 100).toFixed(2));
 
     const localizer = momentLocalizer(moment);
-
-    let theDate: Date = new Date(); 
 
     /**
      * Update time per second.
@@ -23,10 +22,13 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
      */
     useEffect(() => {
         console.log('useEffect');
-        // const setIntervalHandler = setInterval(() => setLiveDate(new Date()), 500);
-        const setIntervalHandler = setInterval(() => theDate = new Date(), 500);
+        const setIntervalHandler = setInterval(() => setLiveDate(new Date()), 500);
+        const setLunarAgeIntervalHandler = setInterval(() => setLunarAgePercentage((Moon.lunarAgePercent() * 100 ).toFixed(2)), 5000);
 
-        return () => clearInterval(setIntervalHandler);
+        return () => {
+            clearInterval(setIntervalHandler);
+            clearInterval(setLunarAgeIntervalHandler);
+        }
     }, [])
     console.log('lunar-calendar.feature');
     return (
@@ -37,7 +39,7 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
                 <div data-testid="lc-lunar-phase-emoji" className="lunar-phase-emoji">{Moon.lunarPhaseEmoji(dateNow)}</div>
                 <div data-testid="lc-local-date-string">
                     {
-                        theDate.toLocaleDateString('en-US', {
+                        liveDate.toLocaleDateString('en-US', {
                             hour: 'numeric',
                             minute: 'numeric',
                             hour12: true,
@@ -46,12 +48,19 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
                     }
                 </div>
                 <div>
-                    Lunar Age Percent: {Moon.lunarAgePercent()}
+                    Lunar Phase: {Moon.lunarPhase()}
+                </div>
+                <div>
+                    Lunar Age: {`${Moon.lunarAge().toFixed(2)} Days`}
+                </div>
+                <div>
+                    Lunar Age Percent: {`${lunarAgePercentage}%`}
                 </div>
                 {/* <Calendar  showTime inline /> */}
                 <Calendar
                     localizer={localizer}
-                    style={{ height: 500 }}
+                    style={{ height: 500 }} 
+                    views={['month']}
                 />
             </div>
         </FeatureContainer>

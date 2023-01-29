@@ -21,7 +21,7 @@ const App: FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/lunar-calendar" element={<LunarCalendar />} />
           <Route path="/summary" element={<Summary />} />
-          <Route path="/conact-us" element={<ContactUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Provider>
