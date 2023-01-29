@@ -1,5 +1,6 @@
 import { FC, createElement, useState, useEffect } from "react";
-import { Calendar } from 'primereact/calendar';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
 import { FeatureContainer } from "../../components/feature-container";
 import { Moon } from "lunarphase-js";
 
@@ -11,6 +12,8 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
     const [dateNow, ] = useState(new Date());
     const [liveDate, setLiveDate] = useState<Date>(new Date());
 
+    const localizer = momentLocalizer(moment);
+
     /**
      * Update time per second.
      * 
@@ -21,7 +24,7 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
 
         return () => clearInterval(setIntervalHandler);
     }, [])
-
+    
     return (
         <FeatureContainer>
             <div className="page-container">
@@ -41,7 +44,11 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
                 <div>
                     Lunar Age Percent: {Moon.lunarAgePercent()}
                 </div>
-                <Calendar  showTime inline />
+                {/* <Calendar  showTime inline /> */}
+                <Calendar
+                    localizer={localizer}
+                    style={{ height: 500 }}
+                />
             </div>
         </FeatureContainer>
     )
