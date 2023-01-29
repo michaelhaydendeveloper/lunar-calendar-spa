@@ -1,4 +1,5 @@
 import { FC, createElement, useState, useEffect } from "react";
+import { Calendar } from 'primereact/calendar';
 import { FeatureContainer } from "../../components/feature-container";
 import { Moon } from "lunarphase-js";
 
@@ -37,6 +38,10 @@ export const LunarCalendarFeature: FC<LunarCalendarProps & LunarCalendarActionPr
                         })
                     }
                 </div>
+                <div>
+                    Lunar Age Percent: {Moon.lunarAgePercent()}
+                </div>
+                <Calendar  showTime inline />
             </div>
         </FeatureContainer>
     )
