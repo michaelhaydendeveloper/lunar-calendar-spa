@@ -1,0 +1,29 @@
+.home-feature-container {
+    border: 2px solid #a99d98;
+    margin: 0 80px;
+    padding: 40px;
+}
+
+.home-feature-container .header {
+    display: flex;
+    justify-content: center;
+}
+
+.home-feature-container:nth-child(2) {
+    text-align: center;
+}
+
+.home-feature-container .header > div:first-of-type,
+.home-feature-container .header > div:last-of-type {
+    border-top: 12px solid #df9e92; 
+    width: 20%;
+    margin-top: 12px;
+}
+
+.home-feature-container .header > div:first-of-type {
+    margin-right: 40px;
+}
+
+.home-feature-container .header > div:last-of-type {
+    margin-left: 40px;
+}
