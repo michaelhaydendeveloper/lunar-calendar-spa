@@ -1,5 +1,6 @@
 import React, { FC, StrictMode } from 'react';
 import './App.css';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Provider } from 'react-redux';
 import store from './reducers/store';
 import NavigationContainer from './pages/navigation/navigation.container';

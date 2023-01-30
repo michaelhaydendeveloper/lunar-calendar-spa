@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { ContainerProps } from "../common/types/container.types";
 
-interface FeatureContainerProps {}
 
-export const FeatureContainer: FC<ContainerProps & FeatureContainerProps> = (props) => {
+
+export const ComponentContainer: FC<ContainerProps> = (props) => {
     const {
         containerStyle,
         classes
