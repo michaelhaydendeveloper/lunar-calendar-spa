@@ -7,6 +7,7 @@
 .home-feature-container .header {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .home-feature-container:nth-child(2) {

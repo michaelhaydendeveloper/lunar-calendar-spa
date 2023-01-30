@@ -23,8 +23,8 @@ export const HomeFeature: FC<HomeProps & HomeActionProps> = () => {
                 <div></div>
             </div>
             <GoalPanelComponet />
-            <TopContainer />
-            <BottomContainer />
+            {/* <TopContainer />
+            <BottomContainer /> */}
         </FeatureContainer>
     )
 }
