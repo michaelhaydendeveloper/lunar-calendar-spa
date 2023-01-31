@@ -1,4 +1,4 @@
-import { FC, createElement } from "react";
+import { FC } from "react";
 import { FeatureContainer } from "../../components/feature-container";
 import logo from '../../assets/logo.svg';
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ export interface NavigationProps {}
 
 export interface NavigationActionProps {}
 
-export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ({}) => {
+export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = () => {
     
     return (
         <FeatureContainer>

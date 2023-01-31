@@ -1,17 +1,13 @@
 import { Moon } from "lunarphase-js";
-import moment from "moment";
-import { createElement, FC, useEffect, useState } from "react";
-import { momentLocalizer } from "react-big-calendar";
+import { FC, useEffect, useState } from "react";
 import { ComponentContainer } from "../../../../components/component-container/component-container.component";
 
 interface Props {}  
 
-export const RightContainer: FC<Props> = ({}) => {
+export const RightContainer: FC<Props> = () => {
     const [dateNow, ] = useState(new Date());
     const [liveDate, setLiveDate] = useState<Date>(new Date());
     const [lunarAgePercentage, setLunarAgePercentage] = useState<String>((Moon.lunarAgePercent() * 100).toFixed(2));
-
-    const localizer = momentLocalizer(moment);
 
     /**
      * Update time per second.

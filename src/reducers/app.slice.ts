@@ -7,10 +7,14 @@ export const initialState: Readonly<AppSatate> = {};
 const appSlice = createSlice({
     name: 'app',
     initialState,
-    reducers: {}
+    reducers: {
+        dateSelected(){}
+    }
 });
 
-export const {} = appSlice.actions;
+export const {
+    dateSelected
+} = appSlice.actions;
 
 const appReducer = appSlice.reducer;
 export default appReducer;

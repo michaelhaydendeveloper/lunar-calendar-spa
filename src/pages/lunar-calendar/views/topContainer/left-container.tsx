@@ -1,11 +1,11 @@
 import moment from "moment";
-import { createElement, FC } from "react";
+import { FC } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import { ComponentContainer } from "../../../../components/component-container/component-container.component";
 
 interface Props {}  
 
-export const LeftContainer: FC<Props> = ({}) => {
+export const LeftContainer: FC<Props> = () => {
     const localizer = momentLocalizer(moment);
     return (
         <ComponentContainer>

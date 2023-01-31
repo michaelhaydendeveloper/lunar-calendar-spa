@@ -1,13 +1,11 @@
-import { FC, createElement } from "react";
+import { FC } from "react";
 import { FeatureContainer } from "../../components/feature-container";
-import logo from '../../assets/logo.svg';
-import { Link } from "react-router-dom";
 
 export interface NotFoundProps {}
 
 export interface NotFoundActionProps {}
 
-export const NotFoundFeature: FC<NotFoundProps & NotFoundActionProps> = ({}) => {
+export const NotFoundFeature: FC<NotFoundProps & NotFoundActionProps> = () => {
     
     return (
         <FeatureContainer>
