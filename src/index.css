@@ -71,8 +71,13 @@ nav {
   font-weight: 600;
 }
 
-.nav__links li a:hover {
+.nav__links li a:hover,
+.nav__links li a.selected-nav {
   color: var(--clr-black);
+}
+
+.nav__links li a.selected-nav {
+  font-weight: bold;
 }
 
 .nav__connect {

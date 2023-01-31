@@ -16,7 +16,6 @@ export const RightContainer: FC<Props> = () => {
      * @returns {Function} clearInterval - eliminates bleeding when navigation between pages
      */
     useEffect(() => {
-        console.log('useEffect');
         const setIntervalHandler = setInterval(() => setLiveDate(new Date()), 500);
         const setLunarAgeIntervalHandler = setInterval(() => setLunarAgePercentage((Moon.lunarAgePercent() * 100 ).toFixed(2)), 5000);
 
@@ -25,7 +24,7 @@ export const RightContainer: FC<Props> = () => {
             clearInterval(setLunarAgeIntervalHandler);
         }
     }, [])
-    console.log('lunar-calendar.feature');
+    
     return (
         <ComponentContainer>
             {`Top -> Right Container`}
