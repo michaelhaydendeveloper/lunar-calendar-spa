@@ -97,7 +97,26 @@ nav {
   background-color: var(--clr-grey-2);
 }
 
+/* ------------------------------------------------------ */
+/* -- MEDIA QUERIES -- */
 
+@media screen and (max-width: 1200px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav__brand {
+    grid-column: 1;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  header {
+    background-image: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .nav__brand {
