@@ -5,6 +5,7 @@ import { FeatureContainer } from "../../components/feature-container";
 import { BottomContainer } from "./views/bottom-container.view";
 import { TopContainer } from "./views/top-container.view";
 import { GoalPanelComponet } from "./components/goal-panel.component";
+import { HeaderComponent } from "./components/header.component";
 
 export interface HomeProps {}
 
@@ -14,14 +15,7 @@ export const HomeFeature: FC<HomeProps & HomeActionProps> = () => {
     
     return (
         <FeatureContainer classes={'home-feature-container'}>
-            <div className="header">
-                <div></div>
-                <div>
-                    <h1>DAILY GOAL</h1>
-                    <h5>OPEN YOUR MIND</h5>
-                </div>
-                <div></div>
-            </div>
+            <HeaderComponent className="header-component" />
             <GoalPanelComponet />
             {/* <TopContainer />
             <BottomContainer /> */}
