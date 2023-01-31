@@ -55,6 +55,7 @@
 
 .home-feature-container .goal-form-panel .p-panel-header > div:first-of-type{
     width: 33%;
+    text-align: left;
 }
 
 .home-feature-container .goal-form-panel .p-panel-header > div:nth-child(2)
