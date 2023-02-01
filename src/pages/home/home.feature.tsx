@@ -1,5 +1,5 @@
 import { FC } from "react";
-import './styles/home.styles.css';
+import './styles/home.styles.scss';
 import { FeatureContainer } from "../../components/feature-container";
 import { GoalPanelComponet } from "./components/goal-panel.component";
 import { HeaderComponent } from "./components/header.component";

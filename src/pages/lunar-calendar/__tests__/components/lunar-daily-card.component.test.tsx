@@ -1,6 +1,5 @@
 import React from 'react';
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { LunarDailyCard } from '../../components/lunar-daily-card.component';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../../../../App';
 
