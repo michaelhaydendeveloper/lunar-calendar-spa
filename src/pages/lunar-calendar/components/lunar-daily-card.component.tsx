@@ -40,13 +40,13 @@ export const LunarDailyCard: FC<LunarDailyCardProps> = (props) => {
                         })
                     }
                 </div>
-                <div>
+                {/* <div data-testid="lc-lunar-phase">
                     Lunar Phase: {Moon.lunarPhase()}
-                </div>
-                <div>
+                </div> */}
+                <div data-testid="lc-lunar-age">
                     Lunar Age: {`${Moon.lunarAge().toFixed(2)} Days`}
                 </div>
-                <div>
+                <div data-testid="lc-lunar-age-percent">
                     Lunar Age Percent: {`${lunarAgePercentage}%`}
                 </div>
             </div>
