@@ -25,7 +25,7 @@ export const LunarDailyCard: FC<LunarDailyCardProps> = (props) => {
     }, [])
     
     return (
-        <Card {...props}>
+        <Card {...props} data-testid="lunar-daily-card">
             <div className="lunar-daily-card-container page-container">
                 <h1 data-testid="lc-h1-header">Lunar Calendar</h1>
                 <div data-testid="lc-lunar-phase">{Moon.lunarPhase()}</div>
