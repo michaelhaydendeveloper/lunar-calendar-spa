@@ -4,6 +4,14 @@
     padding: 0 40px 40px 40px;
 }
 
+@media screen and (max-width: 400px) {
+    .home-feature-container {
+        border: none;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
 .home-feature-container .header-component {
     box-shadow: none;
 }
