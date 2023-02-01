@@ -42,16 +42,16 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     return (
         <Panel {...props} headerTemplate={goalFormPanelHeaderTemplate}  header="The Goal" className="goal-form-panel">
             <div className="goal-form-container">
-                <InputTextarea value={goal} onChange={(e) => setGoal(e.target.value)} rows={5} cols={30} autoResize />
+                <InputTextarea aria-labelledby="goal-textarea" value={goal} onChange={(e) => setGoal(e.target.value)} rows={5} cols={30} autoResize />
                 <Card className="start-finish-card">
                     <div className="start-finish-container">
                         <label>Start:</label>
-                        <Calendar value={start} onChange={(e) => {
+                        <Calendar ariaLabelledBy="goal-start-date" value={start} onChange={(e) => {
                             if(e?.value)
                                 setStart(e.value.toString());
                         }} showTime showSeconds />
                         <label>Finish:</label>
-                        <Calendar minDate={minFinishDate} value={finish} onChange={(e) => setFinish(e.value)} showTime showSeconds />
+                        <Calendar ariaLabelledBy="goal-finish-date" minDate={minFinishDate} value={finish} onChange={(e) => setFinish(e.value)} showTime showSeconds />
                     </div>
                 </Card>
             </div>
