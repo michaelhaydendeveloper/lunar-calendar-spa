@@ -8,3 +8,12 @@ Please be advised, this is a work in progess.
 yarn install
 yarn start
 ```
+
+# Upcomming Changelogs (Actively Adding):
+
+## Note Long Living Branches:
+* main
+* main-react-python (Python UI Server)
+* main-react-php (php UI Server)
+
+## Docker-compose.yml
