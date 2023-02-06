@@ -38,5 +38,21 @@
         border: none;
         margin: 5px;
         padding: 5px;
+
+        .header-component {
+            .header {
+                > div:first-of-type,
+                > div:last-of-type {
+                    width: 35%;
+                }
+                > div:first-of-type {
+                    margin-right: 0px;
+                }
+    
+                > div:last-of-type {
+                    margin-left: 0px;
+                }
+            }
+        }
     }
 }
