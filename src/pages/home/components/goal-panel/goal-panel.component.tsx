@@ -58,7 +58,7 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     return (
         <Panel {...props} data-testid="goal-panel-component" headerTemplate={goalFormPanelHeaderTemplate}  header="The Goal" className="goal-form-panel">
             <div className="goal-form-container">
-                <InputTextarea data-testid="goal-panel-textarea" aria-labelledby="goal-textarea" value={goal} onChange={goalTextareaChangeHandler} rows={5} cols={30} autoResize />
+                <InputTextarea data-testid="goal-panel-textarea" aria-labelledby="goal-textarea" value={goal} onChange={goalTextareaChangeHandler} rows={5} cols={30}  />
                 <Card className="start-finish-card">
                     <div className="start-finish-container">
                         <label id="goal-start-date-label">Start:</label>
