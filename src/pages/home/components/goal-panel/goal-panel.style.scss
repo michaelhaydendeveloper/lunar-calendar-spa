@@ -37,28 +37,33 @@
     display: flex;
 
     .start-finish-container {
+        flex-direction: column;
+        text-align: left;
         display: flex;
 
         input:first-of-type {
             margin-bottom: 20px;
         }
-    }
 
-    .start-finish-container {
-        flex-direction: column;
-        text-align: left;
-
-        input {
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            border-bottom: 1px solid #a99d98;
-            border-radius: 0;
-            padding: 5px 5px 0px 5px;
+        .start-date-calendar,
+        .finish-date-calendar
+         {
+            input {
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid #a99d98;
+                border-radius: 0;
+                padding: 5px 5px 0px 5px;
+            }
+            input:focus {
+                box-shadow: none;
+            }
         }
     }
 
-    > textarea:first-of-type {
+    > textarea:first-of-type,
+    > textarea:first-of-type:focus {
         width: 80%;
         margin-right: 20px;
         box-shadow: none;

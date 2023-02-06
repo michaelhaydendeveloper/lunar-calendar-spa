@@ -20,7 +20,7 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     useEffect(() => {
         if(start) {
             setMinFinishDate(new Date(start));
-            if(finish && new Date(start) > new Date(finish)) {
+            if(finish && new Date(start) >= new Date(finish)) {
                 setFinish(undefined);
             }
         } 
@@ -61,10 +61,10 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
                 <InputTextarea data-testid="goal-panel-textarea" aria-labelledby="goal-textarea" value={goal} onChange={goalTextareaChangeHandler} rows={5} cols={30} autoResize />
                 <Card className="start-finish-card">
                     <div className="start-finish-container">
-                        <label>Start:</label>
-                        <Calendar data-testid="goal-panel-start-date-calendar" ariaLabelledBy="goal-start-date" value={start} onChange={goalStartDateChangeHandler} showTime showSeconds />
-                        <label>Finish:</label>
-                        <Calendar data-testid="goal-panel-finish-date-calendar" ariaLabelledBy="goal-finish-date" minDate={minFinishDate} value={finish} onChange={goalFinishDateChangeHandler} showTime showSeconds />
+                        <label id="goal-start-date-label">Start:</label>
+                        <Calendar className="start-date-calendar" data-testid="goal-panel-start-date-calendar" ariaLabelledBy="goal-start-date-label" value={start} onChange={goalStartDateChangeHandler} showTime showSeconds tabIndex={0} />
+                        <label id="goal-finish-date-label">Finish:</label>
+                        <Calendar className="finish-date-calendar" data-testid="goal-panel-finish-date-calendar" ariaLabelledBy="goal-finish-date-label" minDate={minFinishDate} value={finish} onChange={goalFinishDateChangeHandler} showTime showSeconds tabIndex={1} />
                     </div>
                 </Card>
             </div>

@@ -19,12 +19,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* ------------------------------------------------------ */
-/* -- MEDIA QUERIES -- */
-
-@media screen and (max-width: 1200px) {
-  header {
-    background-image: none;
-  }
-}
