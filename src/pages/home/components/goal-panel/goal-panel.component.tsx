@@ -4,6 +4,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { Card } from 'primereact/card';
 import { Calendar } from 'primereact/calendar';
 import { PanelProps } from 'primereact/panel'
+import './goal-panel.style.scss';
 
 interface GoalPanelProps extends PanelProps {}
 
@@ -13,14 +14,17 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     const [finish, setFinish] = useState<string>();
     const [minFinishDate, setMinFinishDate] = useState<Date>();
 
+    /**
+     * Finish date cannot be greater than start date
+     */
     useEffect(() => {
         if(start) {
             setMinFinishDate(new Date(start));
             if(finish && new Date(start) > new Date(finish)) {
                 setFinish(undefined);
             }
-        }
-    }, [start]);
+        } 
+    }, [start]); // eslint-disable-line
 
     const goalFormPanelHeaderTemplate = () => {
         return (

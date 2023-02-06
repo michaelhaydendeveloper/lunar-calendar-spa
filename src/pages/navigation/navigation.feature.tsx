@@ -2,6 +2,7 @@ import { FC, useEffect, useMemo, useState } from "react";
 import { FeatureContainer } from "../../components/feature-container";
 import logo from '../../assets/logo.svg';
 import { Link } from "react-router-dom";
+import './styles/navigation.style.scss';
 
 export interface NavigationProps {}
 
@@ -36,7 +37,7 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
 
     useEffect(() => {
         buildNavigation();
-    }, [currentPathname]);
+    }, [currentPathname]);  // eslint-disable-line
 
     /**
      * Loop over Nav Data and return cunstructed Navigation Items.

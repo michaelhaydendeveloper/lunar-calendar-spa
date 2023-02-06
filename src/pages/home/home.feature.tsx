@@ -1,7 +1,7 @@
 import { FC } from "react";
 import './styles/home.styles.scss';
 import { FeatureContainer } from "../../components/feature-container";
-import { GoalPanelComponet } from "./components/goal-panel.component";
+import { GoalPanelComponet } from "./components/goal-panel/goal-panel.component";
 import { HeaderComponent } from "./components/header.component";
 
 export interface HomeProps {}
