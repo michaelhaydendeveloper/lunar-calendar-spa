@@ -65,7 +65,7 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
         <FeatureContainer>
             <nav data-testid="navigation-feature">
                 <div className='nav__brand'>
-                    <img data-testid="navigation-feature-logo" src={logo} alt="Logo" />
+                    <img data-testid="navigation-feature-logo" className="app-logo" src={logo} alt="Logo" />
                     <h1 data-testid="navigation-feature-title">Lunar Calendar</h1>
                     <ul className='nav__links'>
                        {buildNavigation()}
