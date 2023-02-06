@@ -1,7 +1,7 @@
 import { FC, useEffect, useMemo, useState } from "react";
 import { FeatureContainer } from "../../components/feature-container";
 import logo from '../../assets/logo.svg';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './styles/navigation.style.scss';
 
 export interface NavigationProps {}
@@ -10,6 +10,7 @@ export interface NavigationActionProps {}
 
 export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = () => {
     const [currentPathname, setCurrentPathname] = useState<string>(window.location.pathname);
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     interface NavData {
         label: string;
@@ -48,26 +49,34 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
             navData.map((nav:NavData, index: number) => {
                 return (
                     <li key={`nav-data-item-${index}`}>
-                        <Link 
+                        <NavLink 
                             data-testid={`navigation-feature-nav-item-${index}`}
-                            onClick={() => setCurrentPathname(nav.path)} 
+                            onClick={() => {
+                                setCurrentPathname(nav.path);
+                                setShowMobileMenu(!showMobileMenu);
+                            }} 
                             className={currentPathname === nav.path ? 'selected-nav':''} 
                             to={nav.path}>
                                 {nav.label}
-                        </Link>
+                        </NavLink>
                     </li>
                 )
             })
         );
     }
 
+    const menuIconClickHandler = () => {
+        setShowMobileMenu(!showMobileMenu);
+    }
+
     return (
         <FeatureContainer>
-            <nav data-testid="navigation-feature">
+            <nav className="navigation-feature" data-testid="navigation-feature">
                 <div className='nav__brand'>
+                    <i className="pi pi-bars mobile-menu-icon" onClick={menuIconClickHandler} ></i>
                     <img data-testid="navigation-feature-logo" className="app-logo" src={logo} alt="Logo" />
                     <h1 data-testid="navigation-feature-title">Lunar Calendar</h1>
-                    <ul className='nav__links'>
+                    <ul className={`nav__links ${showMobileMenu && 'active'}`}>
                        {buildNavigation()}
                     </ul>
                 </div>
