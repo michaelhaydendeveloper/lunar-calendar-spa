@@ -54,5 +54,14 @@
                 }
             }
         }
+
+        .draw-purchase-challenge-container {
+            flex-direction: column !important;
+        }
+
+        .purchases-challenges-container {
+            flex-direction: row !important;
+            width: 100% !important;
+        }
     }
 }

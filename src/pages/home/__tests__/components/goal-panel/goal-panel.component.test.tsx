@@ -1,7 +1,7 @@
 import React from 'react';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import App from '../../../../App';
+import App from '../../../../../App';
 
 describe('', () => {
     let goalPanelTextarea: HTMLElement;
@@ -29,7 +29,13 @@ describe('', () => {
         jest.useRealTimers();
     });
     
-    test('', () => {
-
+    test('Test Finish Date cannot be greater or equal to Start Date', async() => {
+        
+        const input = goalPanelFinishDateCalendar.getElementsByTagName('input');
+        act(() => {
+            fireEvent.mouseDown(input[0]);
+        });
+        const day = await screen.findAllByText('6');
+        fireEvent.dblClick(day[0]);
     });
 });

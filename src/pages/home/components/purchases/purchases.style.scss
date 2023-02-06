@@ -1,0 +1,59 @@
+.purchases-form-panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    .p-panel-header {
+        padding: 0rem 0rem 0rem 1.25rem !important;
+        background-color: var(--background-clr-peach);
+        border: 2px solid var(--border-clr--lgt-brown);
+        
+        > div:first-of-type{
+            width: 33%;
+            text-align: left;
+        }
+    
+        > div:nth-child(2)
+        {
+            height: 20px;
+            width: 5%;
+            background: var(--background-clr-white);
+            border-top: 0px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 60px solid var(--background-clr-peach);
+        }
+
+        > div:last-of-type {
+            width: 100%;
+            height: 40px;
+            background: var(--background-clr-white);
+        }
+    }
+
+    .p-panel-content {
+        padding: 0px 5px 0px 5px;
+        border: 2px solid var(--border-clr--lgt-brown);
+        border-top: none;
+    }
+
+    .purchases-form-container {
+        > textarea:first-of-type,
+        > textarea:first-of-type:focus {
+            width: 100%;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            box-shadow: none;
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .purchases-form-panel {
+        width: 50% !important;
+        margin-right: 10px;
+
+        .p-panel-header > div:first-of-type {
+            width: 50%;
+        }
+    }
+}

@@ -5,6 +5,7 @@ import { Card } from 'primereact/card';
 import { Calendar } from 'primereact/calendar';
 import { PanelProps } from 'primereact/panel'
 import './goal-panel.style.scss';
+import { goalFormPanelHeaderTemplate } from "../common/templates";
 
 interface GoalPanelProps extends PanelProps {}
 
@@ -26,21 +27,8 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
         } 
     }, [start]); // eslint-disable-line
 
-    const goalFormPanelHeaderTemplate = () => {
-        return (
-            <div className="p-panel-header">
-                <div 
-                    className="p-panel-title"
-                >
-                    The Goal
-                </div>
-                <div></div>
-                <div 
-                    className="p-panel-icons"
-                >
-                </div>
-            </div>
-        )
+    const headerTemplate = () => {
+        return goalFormPanelHeaderTemplate('The Goal');
     }
 
     const goalTextareaChangeHandler = (e: any) => {
@@ -56,7 +44,7 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     }
     
     return (
-        <Panel {...props} data-testid="goal-panel-component" headerTemplate={goalFormPanelHeaderTemplate}  header="The Goal" className="goal-form-panel">
+        <Panel {...props} data-testid="goal-panel-component" headerTemplate={headerTemplate}  header="The Goal" className="goal-form-panel">
             <div className="goal-form-container">
                 <InputTextarea data-testid="goal-panel-textarea" aria-labelledby="goal-textarea" value={goal} onChange={goalTextareaChangeHandler} rows={5} cols={30}  />
                 <Card className="start-finish-card">

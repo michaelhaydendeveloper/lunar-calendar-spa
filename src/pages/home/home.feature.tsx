@@ -3,6 +3,9 @@ import './styles/home.styles.scss';
 import { FeatureContainer } from "../../components/feature-container";
 import { GoalPanelComponet } from "./components/goal-panel/goal-panel.component";
 import { HeaderComponent } from "./components/header.component";
+import { DrawCanvas } from "./components/draw-canvas/draw-canvas.component";
+import { Purchases } from "./components/purchases/purchases.component";
+import { Challenges } from "./components/challenges/challenges.component";
 
 export interface HomeProps {}
 
@@ -14,6 +17,13 @@ export const HomeFeature: FC<HomeProps & HomeActionProps> = () => {
         <FeatureContainer classes={'home-feature-container'}>
             <HeaderComponent className="header-component" />
             <GoalPanelComponet />
+            <div className="flex flex-row draw-purchase-challenge-container">
+                <DrawCanvas className="w-8 draw-canvas-form-panel" />
+                <div className="flex flex-column w-4 purchases-challenges-container">
+                    <Purchases />
+                    <Challenges />
+                </div>
+            </div>
         </FeatureContainer>
     )
 }
