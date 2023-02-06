@@ -1,5 +1,5 @@
 .home-feature-container {
-    border: 2px solid #a99d98;
+    border: 2px solid var(--border-clr--lgt-brown);
     margin: 0 80px;
     padding: 0 40px 40px 40px;
     
@@ -17,7 +17,7 @@
 
             > div:first-of-type,
             > div:last-of-type {
-                border-top: 12px solid #df9e92; 
+                border-top: 12px solid var(--background-clr-peach); 
                 width: 20%;
                 margin-top: 12px;
             }

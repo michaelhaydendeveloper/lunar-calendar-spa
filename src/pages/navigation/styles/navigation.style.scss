@@ -25,7 +25,7 @@ nav {
 .nav__brand h1 {
     color: var(--clr-black);
 
-    font-family: "Signika";
+    font-family: var(--font-family);
     font-size: 1.50em;
     font-weight: 700;
     letter-spacing: -1px;

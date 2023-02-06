@@ -11,15 +11,22 @@
   --clr-black: #202020;
   --clr-grey: #c4c4c4;
   --clr-grey-2: #8f8f8f;
+
+  --font-family: "Signika";
+
+  --background-clr-peach: #df9e92;
+  --background-clr-white: #ffffff; 
+  
+  --border-clr--lgt-brown: #a99d98;
 }
 
 body {
   margin: 0;
-  font-family: "Signika";
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .p-component {
-  font-family: "Signika";
+  font-family: var(--font-family);
 }
