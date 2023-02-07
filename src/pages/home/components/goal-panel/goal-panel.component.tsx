@@ -11,7 +11,7 @@ interface GoalPanelProps extends PanelProps {}
 
 export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     const [goal, setGoal] = useState<string | undefined>();
-    const [start, setStart] = useState<string>('Wed Feb 08 2023 09:42:35 GMT-0700 (Mountain Standard Time)');
+    const [start, setStart] = useState<string>();
     const [finish, setFinish] = useState<string>();
     const [minFinishDate, setMinFinishDate] = useState<Date>();
 
