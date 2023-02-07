@@ -11,7 +11,7 @@ interface GoalPanelProps extends PanelProps {}
 
 export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     const [goal, setGoal] = useState<string | undefined>();
-    const [start, setStart] = useState<string>();
+    const [start, setStart] = useState<string>('Wed Feb 08 2023 09:42:35 GMT-0700 (Mountain Standard Time)');
     const [finish, setFinish] = useState<string>();
     const [minFinishDate, setMinFinishDate] = useState<Date>();
 
@@ -36,11 +36,11 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
     }
 
     const goalStartDateChangeHandler = (e: any) => {
-        setStart(e?.value?.toString());
+        setStart(e?.value);
     }
 
     const goalFinishDateChangeHandler = (e: any) => {
-        setFinish(e?.value?.toString());
+        setFinish(e?.value);
     }
     
     return (
@@ -50,9 +50,9 @@ export const GoalPanelComponet: FC<GoalPanelProps> = (props) => {
                 <Card className="start-finish-card">
                     <div className="start-finish-container">
                         <label id="goal-start-date-label">Start:</label>
-                        <Calendar className="start-date-calendar" data-testid="goal-panel-start-date-calendar" ariaLabelledBy="goal-start-date-label" value={start} onChange={goalStartDateChangeHandler} showTime showSeconds tabIndex={0} />
+                        <Calendar className="start-date-calendar" data-testid="goal-panel-start-date-calendar" ariaLabelledBy="goal-start-date-label" hideOnDateTimeSelect value={start} onChange={goalStartDateChangeHandler} showTime showSeconds tabIndex={0} />
                         <label id="goal-finish-date-label">Finish:</label>
-                        <Calendar className="finish-date-calendar" data-testid="goal-panel-finish-date-calendar" ariaLabelledBy="goal-finish-date-label" minDate={minFinishDate} value={finish} onChange={goalFinishDateChangeHandler} showTime showSeconds tabIndex={1} />
+                        <Calendar className="finish-date-calendar" data-testid="goal-panel-finish-date-calendar" ariaLabelledBy="goal-finish-date-label" hideOnDateTimeSelect minDate={minFinishDate} value={finish} onChange={goalFinishDateChangeHandler} showTime showSeconds tabIndex={1} />
                     </div>
                 </Card>
             </div>

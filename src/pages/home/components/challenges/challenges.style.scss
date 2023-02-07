@@ -54,7 +54,12 @@
         width: 50% !important;
 
         .p-panel-header > div:first-of-type {
-            width: 50%;
+            width: 55%;
+            padding-right: 10px;
+        }
+
+        .p-panel-header > div:nth-child(2) {
+            display:none;
         }
     }
 }
