@@ -1,0 +1,7 @@
+5 lines (5 sloc)  38 Bytes
+
+node_modules/
+.idea
+.git
+dist
+coverage
