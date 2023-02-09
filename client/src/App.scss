@@ -3,6 +3,11 @@
   pointer-events: none;
 }
 
+.app-title,
+.app-logo {
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: app-logo-spin infinite 20s linear;
