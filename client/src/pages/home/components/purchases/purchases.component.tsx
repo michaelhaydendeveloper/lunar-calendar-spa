@@ -21,7 +21,7 @@ export const Purchases: FC<PurchasesProps> = (props) => {
     return (
         <Panel {...props}  headerTemplate={headerTemplate} className="purchases-form-panel" >
             <div className="purchases-form-container">
-                <InputTextarea data-testid="purchases-panel-textarea" aria-labelledby="purchases-textarea" value={purchases} onChange={purchasesTextareaChangeHandler} rows={5} cols={30}  />
+                <InputTextarea data-testid="purchases-panel-textarea" aria-labelledby="purchases-textarea" value={purchases} onChange={purchasesTextareaChangeHandler} rows={6} cols={30}  />
             </div>
         </Panel>
     )
