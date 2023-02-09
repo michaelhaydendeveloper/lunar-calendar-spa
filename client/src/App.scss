@@ -8,6 +8,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1200px) {
+  .app-title {
+    white-space: nowrap;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: app-logo-spin infinite 20s linear;
