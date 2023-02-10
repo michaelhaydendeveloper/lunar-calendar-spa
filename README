@@ -1,12 +1,19 @@
 # Lunar Calendar Day-Planner/Journal Application
-This Web Application illustrates one approach to developing a Single-Page-Application using: TypeScript, and React.
+This Web Application illustrates one approach to developing a Single-Page-Application using: NodeJs (TypeScript), and React (PrimeReact Component Library & PrimeFlex Styling Library).
 
 Please be advised, this is a work in progess.
 
-## Start App instructions:
+## Start UI App instructions:
 ```js
+cd client
 yarn install
-yarn start
+yarn dev
+```
+
+## Start Server (UI Server) App instructions:
+```js
+cd server
+docker-compose up
 ```
 
 # Upcomming Changelogs (Actively Adding):
