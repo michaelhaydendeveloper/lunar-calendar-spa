@@ -1,0 +1,141 @@
+/* ------------------------------------------------------ */
+/* -- NAVIGATION -- */
+
+.navigation-feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+
+    .nav__brand {
+        display: flex;
+        align-items: center;
+
+        padding: 30px 75px;
+
+        grid-column: 1 / span 3;
+        
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        img {
+            max-width: 125px;
+            margin-right: 10px;
+            height: auto;
+        }
+        
+        h1 {
+            color: var(--clr-black);
+
+            font-family: var(--font-family);
+            font-size: 1.50em;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+    
+
+        .nav__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            margin-left: 14px;
+            margin-top: 3px;
+
+            li {
+                margin: 0 10px;
+            
+    
+                a {
+                    text-decoration: none;
+                    color: var(--clr-grey-2);
+                    font-weight: 600;
+                }
+        
+                a:hover,
+                a.selected-nav {
+                    color: var(--clr-black);
+                }
+        
+                a.selected-nav {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .nav__connect {
+            width: 175px;
+            height: 50px;
+            margin: 0 75px 0 auto;
+
+            background-color: var(--clr-black);
+            color: var(--clr-white);
+
+            border: none;
+
+            font-size: 1.10em;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: all 250ms ease;
+        }
+
+        .nav__connect:hover {
+            background-color: var(--clr-grey-2);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navigation-feature {
+        grid-template-columns: repeat(2, 1fr);
+    
+
+        .nav__brand {
+            grid-column: 1;
+            padding: 30px 50px;
+        
+            .mobile-menu-icon {
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 15px;
+                font-size: 1.3rem;
+            }
+
+            .nav__connect {
+                margin: 0 50px 0 auto;
+            }
+
+            .nav__links {
+                position: absolute;
+                left: 0;
+                top: 100px;
+                margin: 0;
+                padding: 0;
+                background-color: var(--background-clr-white);
+                width: 0px;
+                height: 100%;
+                transition: all 0.3s ease-in;
+                overflow: hidden;
+                justify-content: left;
+                align-items: start;
+            }
+
+            .nav__links.active {
+                z-index: 1000;
+                width: 270px;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    margin-right: unset;
+                    margin-top: 22px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

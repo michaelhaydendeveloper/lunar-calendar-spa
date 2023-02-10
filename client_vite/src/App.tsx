@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { FC, StrictMode } from 'react';
+import './App.scss';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { Provider } from 'react-redux';
+import store from './reducers/store';
+import NavigationContainer from './pages/navigation/navigation.container';
+import { Route, Routes } from "react-router-dom"
+import { Home } from './pages/home';
+import { LunarCalendar } from './pages/lunar-calendar';
+import { Summary } from './pages/summary';
+import { ContactUs } from './pages/contact-us';
+import { NotFound } from './pages/not-found';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: FC = () => {
+  
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <StrictMode>
+      <Provider store={store}>
+        <NavigationContainer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/lunar-calendar" element={<LunarCalendar />} />
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Provider>
+    </StrictMode>
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +66,38 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Signika:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #202020;
+  --clr-grey: #c4c4c4;
+  --clr-grey-2: #8f8f8f;
+
+  --font-family: "Signika";
+
+  --background-clr-peach: #df9e92;
+  --background-clr-white: #ffffff; 
+  
+  --border-clr--lgt-brown: #a99d98;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.p-component {
+  font-family: var(--font-family);
+}
+

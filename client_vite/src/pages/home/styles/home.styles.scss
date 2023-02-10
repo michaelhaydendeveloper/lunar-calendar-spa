@@ -1,0 +1,67 @@
+.home-feature-container {
+    border: 2px solid var(--border-clr--lgt-brown);
+    margin: 0 80px;
+    padding: 0 40px 40px 40px;
+    
+    :nth-child(2) {
+        text-align: center;
+    }
+
+    .header-component {
+        box-shadow: none;
+
+        .header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            > div:first-of-type,
+            > div:last-of-type {
+                border-top: 12px solid var(--background-clr-peach); 
+                width: 20%;
+                margin-top: 12px;
+            }
+
+            > div:first-of-type {
+                margin-right: 40px;
+            }
+
+            > div:last-of-type {
+                margin-left: 40px;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 590px) {
+    .home-feature-container {
+        border: none;
+        margin: 5px;
+        padding: 5px;
+
+        .header-component {
+            .header {
+                > div:first-of-type,
+                > div:last-of-type {
+                    width: 35%;
+                }
+                > div:first-of-type {
+                    margin-right: 0px;
+                }
+    
+                > div:last-of-type {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .draw-purchase-challenge-container {
+            flex-direction: column !important;
+        }
+
+        .purchases-challenges-container {
+            flex-direction: row !important;
+            width: 100% !important;
+        }
+    }
+}
