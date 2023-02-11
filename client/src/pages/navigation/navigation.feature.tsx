@@ -1,6 +1,6 @@
 import { FC, useEffect, useMemo, useState } from "react";
 import { FeatureContainer } from "../../components/feature-container";
-import logo from '../../assets/logo.svg';
+import { logo } from '../../assets';
 import { NavLink, useNavigate } from "react-router-dom";
 import './styles/navigation.style.scss';
 
