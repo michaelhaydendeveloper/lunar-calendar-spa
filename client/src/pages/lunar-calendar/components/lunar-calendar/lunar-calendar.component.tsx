@@ -12,19 +12,19 @@ export const LunarCalendar: FC<LunarCalendarProps> = (props) => {
     const dateTemplate = (date: CalendarDateTemplateEvent) => {
         const lunarDate = new Date(`${date.month + 1}/${date.day}/${date.year} 00:00:01`);
         const lunarPercentage = parseInt((Moon.lunarAgePercent(lunarDate) * 100).toFixed(0));
-        const day = lunarPercentage >= 0 && lunarPercentage <= 4 ? 'day1-right' : '';
+        const day = lunarPercentage >= 0 && lunarPercentage <= 3 ? 'day1-right' : '';
         return (
-            <div className={`date-template ${day}`} style={{display: 'flex', minHeight: '40px', minWidth: '40px'}}>    
+            <div className={`date-template ${day}`}>    
                 <div style={{display: 'flex', flexDirection:'column'}}>
                     <div style={{fontSize: '2rem'}}>
                         {lunarDate.getDate()}
                     </div>
                     {
-                        Moon.lunarPhase(lunarDate) === 'New' && (lunarPercentage >= 0 && lunarPercentage <= 4) ?
-                            <span style={{fontSize: '5px'}}>Sabbath</span>
+                        Moon.lunarPhase(lunarDate) === 'New' && (lunarPercentage >= 0 && lunarPercentage <= 3) ?
+                            <div style={{fontSize: '5px', textAlign: 'right'}}>Sabbath</div>
                         :
                             <>
-                                {lunarPercentage}
+                                
                             </>
                     }
                 </div>

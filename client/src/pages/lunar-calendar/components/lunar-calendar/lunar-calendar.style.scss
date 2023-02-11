@@ -1,3 +1,9 @@
+.lunar-calendar .date-template {
+    display: flex; 
+    min-height: 40px;
+    min-width: 40px;
+}
+
 .lunar-calendar .p-datepicker table td > span {
     height: 4.5rem;
     width: 4.5rem;
