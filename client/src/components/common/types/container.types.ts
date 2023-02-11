@@ -1,5 +1,6 @@
-export interface ContainerProps {
-    containerStyle?: any;
-    classes?: any;
+import { BaseFcProp } from "./base-fc.types";
+
+export interface ContainerProps extends BaseFcProp  {
     children?: any;
 }
+
