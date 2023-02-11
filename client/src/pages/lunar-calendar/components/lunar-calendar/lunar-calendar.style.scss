@@ -1,29 +1,46 @@
-.lunar-calendar .date-template {
-    display: flex; 
-    min-height: 40px;
-    min-width: 40px;
+.lunar-calendar-container {
+    width: 100%;
+
+    .lunar-calendar {
+        width: 100% !important;
+
+        .date-template {
+            display: flex; 
+            min-height: 40px;
+            min-width: 40px;
+        
+        }
+        
+        .p-datepicker table td > span {
+            height: 4rem;
+            width: 5rem;
+            border-radius: none !important;
+        }
+        
+        .p-datepicker table td > span {
+            .date-template.day1-left,
+            .date-template.day1-left {
+                -moz-background-clip: border;     /* Firefox 3.6 */
+                -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+                background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        
+                -moz-background-clip: padding;     /* Firefox 3.6 */
+                -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+                background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+            }
+        
+            .date-template.day1-left {
+                border-left: 20pt solid rgba(153, 131, 239, 0.3);
+            }
+        
+            .date-template.day1-right {
+                border-right: 20pt solid rgba(153, 131, 239, 0.3);
+            }
+        }
+    }
 }
 
-.lunar-calendar .p-datepicker table td > span {
-    height: 4.5rem;
-    width: 4.5rem;
-}
 
-.lunar-calendar .p-datepicker table td > span .date-template.day1-left,
-.lunar-calendar .p-datepicker table td > span .date-template.day1-left {
-    -moz-background-clip: border;     /* Firefox 3.6 */
-    -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
-    background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 
-    -moz-background-clip: padding;     /* Firefox 3.6 */
-    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
-    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-}
 
-.lunar-calendar .p-datepicker table td > span .date-template.day1-left {
-    border-left: 20pt solid rgba(153, 131, 239, 0.3);
-}
 
-.lunar-calendar .p-datepicker table td > span .date-template.day1-right {
-    border-right: 20pt solid rgba(153, 131, 239, 0.3);
-}

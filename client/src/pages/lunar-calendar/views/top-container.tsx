@@ -8,7 +8,7 @@ interface Props {}
 export const TopContainer: FC<Props> = () => {
 
     return (
-        <ComponentContainer containerStyle={{ display: 'flex' }}>
+        <ComponentContainer containerStyle={{ display: 'flex', flexDirection: 'column', width: '80%', margin: 'auto' }}>
             <LeftContainer />
             <RightContainer />
         </ComponentContainer>

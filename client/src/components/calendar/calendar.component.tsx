@@ -7,21 +7,18 @@ import {
     CalendarDateTemplateEvent as PrimeCalendarDateTemplateEvent 
 } from 'primereact/calendar';
 
-interface CalendarProps extends PrimeCalendarProps {}
+interface CalendarProps extends PrimeCalendarProps {
+}
 export interface CalendarDateTemplateEvent extends PrimeCalendarDateTemplateEvent {}
 
 export const Calendar: FC<ContainerProps & CalendarProps> = (props) => {
-    const {
-        containerStyle,
-        classes
-    } = props;
 
     return (
-        <div
-            style={containerStyle}
-            className={classes}
-        >
+        // <div
+        //     style={divContainerStyle}
+        //     className={classes}
+        // >
             <PrimeCalendar {...props}  inline showWeek />
-        </div>
+        // </div>
     )
 }

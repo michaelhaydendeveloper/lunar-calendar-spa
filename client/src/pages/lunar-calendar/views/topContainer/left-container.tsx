@@ -7,7 +7,7 @@ interface Props {}
 
 export const LeftContainer: FC<Props> = () => {
     return (
-        <ComponentContainer>
+        <ComponentContainer classes={"lunar-calendar-container"}>
             <LunarCalendar />
         </ComponentContainer>
     )
