@@ -14,8 +14,8 @@ export interface HomeActionProps {}
 export const HomeFeature: FC<HomeProps & HomeActionProps> = () => {
     
     return (
-        <FeatureContainer classes={'home-feature-container'}>
-            <HeaderComponent className="header-component" />
+        <FeatureContainer classes={'home-feature-container feature-container'}>
+            <HeaderComponent className="header-component" titleText="DAILY GOAL" subTitleText="OPEN YOUR MIND" />
             <GoalPanelComponet />
             <div className="flex flex-row draw-purchase-challenge-container">
                 <DrawCanvas className="w-8 draw-canvas-form-panel" />

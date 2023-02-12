@@ -12,7 +12,7 @@ test('Navigation Feature parts are visible', () => {
         </Provider>
     </BrowserRouter>);
 
-  screen.getByTestId('navigation-feature');
+  screen.getByTestId('navigation-feature-container');
   screen.getByTestId('navigation-feature-logo');
   screen.getByTestId('navigation-feature-title');
 

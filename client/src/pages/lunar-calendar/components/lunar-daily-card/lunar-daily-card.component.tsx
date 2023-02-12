@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { Card, CardProps } from "primereact/card";
 import { Moon } from "lunarphase-js";
+import './lunar-daily-card.style.scss';
 
 interface LunarDailyCardProps extends CardProps {}
 
@@ -25,8 +26,8 @@ export const LunarDailyCard: FC<LunarDailyCardProps> = (props) => {
     }, [])
     
     return (
-        <Card {...props} data-testid="lunar-daily-card">
-            <div className="lunar-daily-card-container page-container">
+        <Card {...props} className="lunar-daily-card" data-testid="lunar-daily-card">
+            <div className="lunar-daily-card-container">
                 <h1 data-testid="lc-h1-header">Lunar Calendar</h1>
                 <div data-testid="lc-lunar-phase">{Moon.lunarPhase()}</div>
                 <div data-testid="lc-lunar-phase-emoji" className="lunar-phase-emoji">{Moon.lunarPhaseEmoji(dateNow)}</div>
@@ -40,9 +41,6 @@ export const LunarDailyCard: FC<LunarDailyCardProps> = (props) => {
                         })
                     }
                 </div>
-                {/* <div data-testid="lc-lunar-phase">
-                    Lunar Phase: {Moon.lunarPhase()}
-                </div> */}
                 <div data-testid="lc-lunar-age">
                     Lunar Age: {`${Moon.lunarAge().toFixed(2)} Days`}
                 </div>

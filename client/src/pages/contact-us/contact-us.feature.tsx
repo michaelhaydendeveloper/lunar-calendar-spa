@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { FeatureContainer } from "../../components/feature-container";
+import { HeaderComponent } from "../home/components/header.component";
 
 export interface ContactUsProps {}
 
@@ -8,7 +9,8 @@ export interface ContactUsActionProps {}
 export const ContactUsFeature: FC<ContactUsProps & ContactUsActionProps> = () => {
     
     return (
-        <FeatureContainer>
+        <FeatureContainer classes={'not-found-feature-container feature-container'}>
+            <HeaderComponent className="header-component" titleText="CONTACT US" subTitleText="OPEN YOUR MIND" />
             <div className="page-container">
                 Contact Us
             </div>

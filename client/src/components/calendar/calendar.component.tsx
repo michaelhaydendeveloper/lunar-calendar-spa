@@ -14,11 +14,6 @@ export interface CalendarDateTemplateEvent extends PrimeCalendarDateTemplateEven
 export const Calendar: FC<ContainerProps & CalendarProps> = (props) => {
 
     return (
-        // <div
-        //     style={divContainerStyle}
-        //     className={classes}
-        // >
-            <PrimeCalendar {...props}  inline showWeek />
-        // </div>
+        <PrimeCalendar {...props} />
     )
 }

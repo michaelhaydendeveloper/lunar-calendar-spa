@@ -6,8 +6,8 @@ interface Props {}
 export const BottomContainer: FC<Props> = () => {
 
     return (
-        <ComponentContainer>
-            Bottom Container
+        <ComponentContainer  classes={"lunar-calendar-bottom-container"}>
+            
         </ComponentContainer>
     )
 }

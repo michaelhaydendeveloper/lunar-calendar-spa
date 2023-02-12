@@ -1,0 +1,109 @@
+.lunar-calendar {
+    width: 100% !important;
+
+    .date-template {
+        display: flex;
+        min-height: 40px;
+        min-width: 40px;
+
+    }
+
+    .p-datepicker table td>span {
+        height: 100%;
+        width: 100%;
+        border-radius: unset !important;
+    }
+
+    .p-datepicker table td>span {
+
+        .date-template.day1-left,
+        .date-template.day1-left {
+            -moz-background-clip: border;
+            /* Firefox 3.6 */
+            -webkit-background-clip: border;
+            /* Safari 4? Chrome 6? */
+            background-clip: border-box;
+            /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+            -moz-background-clip: padding;
+            /* Firefox 3.6 */
+            -webkit-background-clip: padding;
+            /* Safari 4? Chrome 6? */
+            background-clip: padding-box;
+            /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        }
+
+        .date-template.day1-left {
+            background: linear-gradient(
+                to left, 
+                #ffffff 0%, 
+                #ffffff 50%, 
+                #9899f5 50%, 
+                #9899f5 100%
+            );
+        }
+
+        .date-template.day1-right {
+            background: linear-gradient(
+                to right, 
+                #ffffff 0%, 
+                #ffffff 50%, 
+                #9899f5 50%, 
+                #9899f5 100%
+            );
+        }
+
+        .date-template {
+            .lunar-date-phase {
+                display: flex; 
+                flex-direction: column;
+
+                .lunar-date {
+                    font-size: 2rem;
+                }
+                .lunar-phase {
+                    writing-mode: vertical-lr;
+                    text-orientation: mixed;
+                    font-size: .7rem;
+                    padding: 0 0 5px 3px;
+                    font-weight: bold;
+                }
+            }
+
+            .lunar-emoji-percent {
+                display: flex;
+                flex-direction: column;
+
+                .lunar-emoji {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 590px) {
+            
+            .date-template {
+                min-height: 20px;
+                min-width: 20px;
+
+                .lunar-date-phase {
+
+                
+                    .lunar-date {
+                        font-size: 1rem;
+                    }
+                    .lunar-phase {
+                        font-size: 1rem;
+                        text-align: right;
+                    }
+                }
+            }
+
+            .lunar-emoji-percent {
+                display: flex;
+                flex-direction: column;
+                font-size: 1rem;
+            }
+        }
+    }
+}

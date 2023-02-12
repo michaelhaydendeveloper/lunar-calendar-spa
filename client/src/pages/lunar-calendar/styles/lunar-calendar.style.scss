@@ -1,3 +1,33 @@
-.lunar-phase-emoji {
+.lunar-calendar-feature-container {
+  .lunar-phase-emoji {
     font-size: 10em;
   }
+
+  .lunar-calendar-top-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    column-gap: 25px;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 590px) {
+    .lunar-calendar-top-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      column-gap: 25px;
+    }
+  }
+
+  .lunar-calendar-top-left-container {
+    width: 100%;
+  }
+
+  // .lunar-calendar-top-right-container {}
+
+
+  // .lunar-calendar-bottom-container {}
+}

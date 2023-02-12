@@ -16,12 +16,16 @@ jobs:
         key: ${{ secrets.SSH_DEPLOYMENT_SECRET }}
         port: ${{ secrets.SSH_DEPLOYMENT_PORT }}
         script: |
-          cd /web
-          if [ -d "hello-github-runner" ]; then
-          cd hello-github-runner
+          cd /private
+          if [ -d "lunar-calendar-spa" ]; then
+          cd lunar-calendar-spa
           git checkout main
           git pull
+          cd client
+          yarn install
+          yarn build
+          cp -r dist ../../../web/.
           else
-          git clone git@github.com:michaelhaydendeveloper/hello-github-runner.git
+          git clone git@github.com:michaelhaydendeveloper/lunar-calendar-spa.git
           fi
           ls -la
