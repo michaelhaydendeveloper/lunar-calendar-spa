@@ -11,10 +11,10 @@ jobs:
     - name: deploy to UI Server
       uses: appleboy/ssh-action@master
       with: 
-        host: ${{ secrets.SSH_DEPLOYMENT_HOST_THENATIONLLC_DEV }}
-        username: ${{ secrets.SSH_DEPLOYMENT_USERNAME_THENATIONLLC_DEV }}
-        key: ${{ secrets.SSH_DEPLOYMENT_SECRET_THENATIONLLC_DEV }}
-        port: ${{ secrets.SSH_DEPLOYMENT_PORT_THENATIONLLC_DEV }}
+        host: ${{ secrets.SSH_DEPLOYMENT_HOST }}
+        username: ${{ secrets.SSH_DEPLOYMENT_USERNAME }}
+        key: ${{ secrets.SSH_DEPLOYMENT_SECRET }}
+        port: ${{ secrets.SSH_DEPLOYMENT_PORT }}
         script: |
           cd /web
           if [ -d "hello-github-runner" ]; then
