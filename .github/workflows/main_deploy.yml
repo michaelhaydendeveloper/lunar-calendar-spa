@@ -1,0 +1,27 @@
+name: main-deploy
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy to UI Server
+      uses: appleboy/ssh-action@master
+      with: 
+        host: ${{ secrets.SSH_DEPLOYMENT_HOST_THENATIONLLC_DEV }}
+        username: ${{ secrets.SSH_DEPLOYMENT_USERNAME_THENATIONLLC_DEV }}
+        key: ${{ secrets.SSH_DEPLOYMENT_SECRET_THENATIONLLC_DEV }}
+        port: ${{ secrets.SSH_DEPLOYMENT_PORT_THENATIONLLC_DEV }}
+        script: |
+          cd /web
+          if [ -d "hello-github-runner" ]; then
+          cd hello-github-runner
+          git checkout main
+          git pull
+          else
+          git clone git@github.com:michaelhaydendeveloper/hello-github-runner.git
+          fi
+          ls -la
