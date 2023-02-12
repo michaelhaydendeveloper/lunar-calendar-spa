@@ -1,7 +1,9 @@
+Please Be Avised, this is a work in progress. Use at your own risk.
 # Lunar Calendar Day-Planner/Journal Application
+
 This Web Application illustrates one approach to developing a Single-Page-Application using: NodeJs (TypeScript), and React (PrimeReact Component Library & PrimeFlex Styling Library).
 
-Please be advised, this is a work in progess.
+Again, please be advised, this is a work in progess. Use at your own risk.
 
 ## Start UI App instructions:
 ```js
