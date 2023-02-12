@@ -26,6 +26,6 @@ jobs:
           yarn build
           cp -r dist ../../../web/.
           else
-          git clone git@github.com:michaelhaydendeveloper/lunar-calendar-spa.git
+          git clone ${{ secrets.SSH_DEPLOYMENT_SOURCE }}
           fi
           ls -la
