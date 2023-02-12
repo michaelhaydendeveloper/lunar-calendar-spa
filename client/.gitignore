@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# allowing build until I get CI/CD issue resolved
+# dist
 dist-ssr
 *.local
 
@@ -25,5 +26,3 @@ dist-ssr
 
 # testing
 /coverage
-
-build
