@@ -86,16 +86,14 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
 
     return (
         <FeatureContainer  classes={"navigation-feature-container"} data-testid="navigation-feature-container">
-            {/* <nav className="navigation-feature" data-testid="navigation-feature"> */}
-                <div className='nav__brand'>
-                    <i className="pi pi-bars mobile-menu-icon" onClick={menuIconClickHandler} ></i>
-                    <img data-testid="navigation-feature-logo" className="app-logo" src={logo} alt="Logo" onClick={clickLogoHandler} />
-                    <h1 data-testid="navigation-feature-title" className="app-title" onClick={clickTitleHandler}>Lunar Calendar</h1>
-                    <ul className={`nav__links ${showMobileMenu && 'active'}`}>
-                       {buildNavigation()}
-                    </ul>
-                </div>
-            {/* </nav> */}
+            <div className='nav__brand'>
+                <i className="pi pi-bars mobile-menu-icon" onClick={menuIconClickHandler} ></i>
+                <img data-testid="navigation-feature-logo" className="app-logo" src={`.${logo}`} alt="Logo" onClick={clickLogoHandler} />
+                <h1 data-testid="navigation-feature-title" className="app-title" onClick={clickTitleHandler}>Lunar Calendar</h1>
+                <ul className={`nav__links ${showMobileMenu && 'active'}`}>
+                    {buildNavigation()}
+                </ul>
+            </div>
         </FeatureContainer>
     )
 }
