@@ -22,8 +22,8 @@ jobs:
           git checkout main
           git pull
           cd client
-          yarn install
-          yarn build
+          # yarn install
+          # yarn build
           cp -r dist ../../../web/.
           else
           git clone ${{ secrets.SSH_DEPLOYMENT_SOURCE }}
