@@ -22,19 +22,19 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
     const navData:NavData[] = useMemo(() => [
         {
             label: 'Home',
-            path: '/'
+            path: './'
         },
         {
             label: 'Lunar Calendar',
-            path: '/lunar-calendar'
+            path: './lunar-calendar'
         },
         {
             label: 'Summary',
-            path: '/summary'
+            path: './summary'
         },
         {
             label: 'Contact Us',
-            path: '/contact-us'
+            path: './contact-us'
         }
     ], [])
 
@@ -69,7 +69,7 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
 
     const navigateHome = () => {
         setCurrentPathname('/');
-        navigate('/');
+        navigate('./');
     }
 
     const clickLogoHandler = () => {
