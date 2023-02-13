@@ -80,7 +80,7 @@
             }
         }
 
-        @media screen and (max-width: 590px) {
+        @media screen and (max-width: 940px) {
             
             .date-template {
                 min-height: 20px;
@@ -97,13 +97,35 @@
                         text-align: right;
                     }
                 }
+                
+                .lunar-emoji-percent {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1rem;
+                }
             }
 
-            .lunar-emoji-percent {
-                display: flex;
-                flex-direction: column;
-                font-size: 1rem;
+            
+        }
+
+        @media screen and (max-width: 400px) {
+            .date-template {
+                .lunar-date-phase {
+                    .lunar-date {
+                        font-size: .5rem;
+                    }
+                    .lunar-phase {
+                        font-size: .5rem;
+                    }
+                }
+                
+                .lunar-emoji-percent {
+                    .lunar-emoji {
+                        font-size: 1rem;
+                    }
+                }
             }
+            
         }
     }
 }

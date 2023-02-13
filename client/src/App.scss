@@ -31,7 +31,7 @@
 }
 
 .feature-container {
-  border: 2px solid var(--border-clr--lgt-brown);
+  border: 2px solid var(--border-clr--lgt-purple);
   margin: 0 80px;
   padding: 0 40px 40px 40px;
 
@@ -65,7 +65,7 @@
   }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 940px) {
   .feature-container {
     border: none;
     margin: 5px;

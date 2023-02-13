@@ -2,7 +2,7 @@
     .p-panel-header {
         padding: 0rem 0rem 0rem .5rem !important;
         background-color: var(--background-clr-peach);
-        border: 2px solid var(--border-clr--lgt-brown);
+        border: 2px solid var(--border-clr--lgt-purple);
         
         > div:first-of-type{
             width: 33%;
@@ -28,7 +28,7 @@
 
     .p-panel-content {
         padding: 0px 5px 0px 5px;
-        border: 2px solid var(--border-clr--lgt-brown);
+        border: 2px solid var(--border-clr--lgt-purple);
         border-top: none;
     }
 }
@@ -52,7 +52,7 @@
                 border-top: none;
                 border-right: none;
                 border-left: none;
-                border-bottom: 1px solid var(--border-clr--lgt-brown);
+                border-bottom: 1px solid var(--border-clr--lgt-purple);
                 border-radius: 0;
                 padding: 5px 5px 0px 5px;
             }
@@ -78,7 +78,7 @@
     .start-finish-card{
         box-shadow: none;
         border-radius: 0;
-        border-left: 2px solid var(--border-clr--lgt-brown);
+        border-left: 2px solid var(--border-clr--lgt-purple);
 
         .p-card-body {
             padding: 0px 10px 0px 10px;

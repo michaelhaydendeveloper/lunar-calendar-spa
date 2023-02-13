@@ -5,7 +5,7 @@
     .p-panel-header {
         padding: 0rem 0rem 0rem .5rem !important;
         background-color: var(--background-clr-peach);
-        border: 2px solid var(--border-clr--lgt-brown);
+        border: 2px solid var(--border-clr--lgt-purple);
         
         > div:first-of-type{
             width: 33%;
@@ -31,12 +31,12 @@
 
     .p-panel-content {
         padding: 0px 5px 0px 5px;
-        border: 2px solid var(--border-clr--lgt-brown);
+        border: 2px solid var(--border-clr--lgt-purple);
         border-top: none;
     }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 940px) {
     .draw-canvas-form-panel {
         width: 100% !important;
 
