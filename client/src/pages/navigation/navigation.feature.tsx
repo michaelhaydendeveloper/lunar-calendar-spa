@@ -22,7 +22,7 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
     const navData:NavData[] = useMemo(() => [
         {
             label: 'Home',
-            path: './'
+            path: './home'
         },
         {
             label: 'Lunar Calendar',

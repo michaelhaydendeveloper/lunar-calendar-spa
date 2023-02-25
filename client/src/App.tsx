@@ -10,6 +10,7 @@ import { LunarCalendar } from './pages/lunar-calendar';
 import { Summary } from './pages/summary';
 import { ContactUs } from './pages/contact-us';
 import { NotFound } from './pages/not-found';
+import { Login } from './pages/login';
 
 const App: FC = () => {
   
@@ -18,7 +19,8 @@ const App: FC = () => {
       <Provider store={store}>
         <NavigationContainer />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/lunar-calendar" element={<LunarCalendar />} />
           <Route path="/summary" element={<Summary />} />
           <Route path="/contact-us" element={<ContactUs />} />
