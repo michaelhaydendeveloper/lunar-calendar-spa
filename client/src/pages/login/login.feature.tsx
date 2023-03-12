@@ -31,13 +31,14 @@ export const LoginFeature: FC<LoginProps & LoginActionProps> = () => {
                         </div>
                         <div className="forget">
                             <label htmlFor="">
-                                <Checkbox checked />Remember Me <a href="#">Forget Password</a>
+                                <Checkbox checked />Remember Me
                             </label>
 
                         </div>
                         <button>Log in</button>
                         <div className="register">
-                            <p>Don't have a account <a href="#">Register</a></p>
+                            <p>Don't have a account? <a href="#">Register</a></p>
+                            <p><a href="#">Forget Password</a></p>
                         </div>
                     </form>
                 </div>
