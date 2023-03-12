@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 # allowing build until I get CI/CD issue resolved
-# dist
+dist
 dist-ssr
 *.local
 
