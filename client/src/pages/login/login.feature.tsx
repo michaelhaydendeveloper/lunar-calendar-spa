@@ -37,7 +37,7 @@ export const LoginFeature: FC<LoginProps & LoginActionProps> = () => {
                         </div>
                         <button>Log in</button>
                         <div className="register">
-                            <p>Don't have a account? <a href="#">Register</a></p>
+                            <p>Don't have an account? <a href="#">Register</a></p>
                             <p><a href="#">Forgot Password</a></p>
                         </div>
                     </form>
