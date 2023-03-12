@@ -11,9 +11,9 @@ jobs:
     - name: deploy to UI Server
       uses: appleboy/ssh-action@master
       with: 
-        host: ${{ secrets.SSH_DEV_BOYCOIN_DEPLOYMENT_HOST }}
-        username: ${{ secrets.SSH_DEV_BOYCOIN_DEPLOYMENT_USERNAME }}
-        key: ${{ secrets.SSH_DEV_BOYCOIN_DEPLOYMENT_SECRET }}
+        host: ${{ secrets.SSH_DEPLOYMENT_HOST }}
+        username: ${{ secrets.SSH_DEPLOYMENT_USERNAME }}
+        key: ${{ secrets.SSH_DEPLOYMENT_SECRET }}
         port: ${{ secrets.SSH_DEPLOYMENT_PORT }}
         script: |
           cd /private
@@ -23,8 +23,10 @@ jobs:
           git pull
           cd client
           # yarn install
+          npm install
           # yarn build
-          cp -r dist ../../../web/.
+          npm run build
+          cp -r dist/* ../../../web/.
           else
           git clone ${{ secrets.SSH_DEPLOYMENT_SOURCE }}
           fi
