@@ -41,7 +41,7 @@ export const LoginComponent: FC<LoginComponentProps> = ({
             </div>
             <div className="forget">
                 <label htmlFor="">
-                    <Checkbox checked={rememberMe} onChange={e =>  setRemeberMe(e.checked ? true : false) }  />Remember Me
+                    <Checkbox checked={rememberMe} onChange={e =>  setRemeberMe(e.checked ? true : false) }  /> Remember Me
                 </label>
 
             </div>

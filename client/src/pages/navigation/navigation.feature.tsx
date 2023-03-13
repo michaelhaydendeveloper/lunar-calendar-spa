@@ -57,7 +57,7 @@ export const NavigationFeature: FC<NavigationProps & NavigationActionProps> = ()
                                 setCurrentPathname(nav.path);
                                 setShowMobileMenu(!showMobileMenu);
                             }} 
-                            className={currentPathname === nav.path ? 'selected-nav':''} 
+                            className={currentPathname.replace('.', '') === nav.path.replace('.', '') ? 'selected-nav':''} 
                             to={nav.path}>
                                 {nav.label}
                         </NavLink>
