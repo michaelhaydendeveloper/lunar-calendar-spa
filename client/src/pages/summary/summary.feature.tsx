@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { FeatureContainer } from "../../components/feature-container";
+import { PanelComponent as Panel } from "../../components/panel";
 import { HeaderComponent } from "../home/components/header.component";
 
 export interface SummaryProps {}
@@ -11,9 +12,9 @@ export const SummaryFeature: FC<SummaryProps & SummaryActionProps> = () => {
     return (
         <FeatureContainer classes={'summary-feature-container feature-container'}>
             <HeaderComponent className="header-component" titleText="SUMMARY" subTitleText="OPEN YOUR MIND" />
-            <div className="page-container">
+            <Panel className="page-container">
                 Summary
-            </div>
+            </Panel>
         </FeatureContainer>
     )
 }
