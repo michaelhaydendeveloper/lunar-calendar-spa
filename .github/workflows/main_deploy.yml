@@ -26,7 +26,7 @@ jobs:
           npm install
           # yarn build
           npm run build
-          cp -r dist/* ../../../web/.
+          cp -rT dist/* ../../../web/.
           else
           git clone ${{ secrets.SSH_DEPLOYMENT_SOURCE }}
           fi
