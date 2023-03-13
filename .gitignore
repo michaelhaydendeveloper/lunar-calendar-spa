@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But Not these files..
+!.gitignore
+!.github
+!client
+!server
+!README
