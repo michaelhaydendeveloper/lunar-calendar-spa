@@ -1,25 +1,31 @@
 import { FC } from "react";
 import { FeatureContainer } from "../../components/feature-container";
 import { LoginComponent } from "./components/login/login.component";
-// import { MailOutline, LockClosedOutline } from "react-ionicons";
-// import { InputTextComponent as InputText } from "../../components/input-text";
-// import { PasswordComponent as Password } from "../../components/password";
-// import { CheckboxComponent as Checkbox } from "../../components/checkbox";
+import { LoginSubmissionProps } from "./types/login.interfaces";
 
 import './styles/login.styles.scss';
 
+
 export interface LoginProps { }
 
-export interface LoginActionProps { }
+export interface LoginActionProps { 
+    submitLogin: (values: LoginSubmissionProps) => void;
+}
 
-export const LoginFeature: FC<LoginProps & LoginActionProps> = () => {
+export const LoginFeature: FC<LoginProps & LoginActionProps> = ({
+    submitLogin,
+}) => {
+
+    const onSubmitLogin = (values: LoginSubmissionProps) => {
+        submitLogin(values);
+    }
 
     return (
         <FeatureContainer classes={'login-feature-container'}>
             <div className="form-box">
                 <div className="form-value">
-                    <form action="">
-                        <LoginComponent />
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <LoginComponent onSubmit={onSubmitLogin} />
                     </form>
                 </div>
             </div>
