@@ -1,3 +1,13 @@
+@media screen and (max-width: 940px) {
+    .lunar-calendar-feature-container {
+        .header-component {
+            .p-card-body {
+                padding: 0 1.25rem;
+            }
+        }
+    }
+}
+
 .lunar-calendar {
     width: 100% !important;
 
@@ -81,6 +91,8 @@
         }
 
         @media screen and (max-width: 940px) {
+
+
             
             .date-template {
                 min-height: 20px;
